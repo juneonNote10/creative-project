@@ -29,6 +29,15 @@ router.post("/", upload.single('animation'), async (req, res) => {
       message: "Must upload a file."
     });
 
+  const existAnimation = await Animation.findOne({
+    title: req.body.title
+  })
+
+  if (existAnimation)
+    return res.status(403).send({
+      message: "Animation already exists"
+    });
+
   const animation = new Animation({
     path: "/images/" + req.file.filename,
     title: req.body.title,
