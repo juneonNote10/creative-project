@@ -23,7 +23,7 @@
         <input type="number" v-model="publishedYear" id="publishedYear">
       </div>
       <div class="pure-control-group">
-        <label for="seasons">Total episodes: </label>
+        <label for="seasons">Total seasons: </label>
         <input type="number" v-model="seasons" id="seasons">
       </div>
       <div class="pure-control-group">
