@@ -60,7 +60,7 @@ router.post("/:id", validUser, async (req, res) => {
 });
 
 // add animation to user schedule
-router.put("/:id", validUser, async (req, res) => {
+router.put("/addSchedule/:id", validUser, async (req, res) => {
   try {
     let animation = await Animation.findOne({
       _id: req.params.id
@@ -78,6 +78,32 @@ router.put("/:id", validUser, async (req, res) => {
 
     list.scheduled = true;
     list.addedDate = Date.now();
+    await list.save();
+    res.send(list);
+  } catch (error) {
+    console.log(error);
+    return res.sendStatus(500);
+  }
+});
+
+// remove animation to user schedule
+router.put("/removeSchedule/:id", validUser, async (req, res) => {
+  try {
+    let animation = await Animation.findOne({
+      _id: req.params.id
+    });
+
+    let list = await List.findOne({
+      user: req.user,
+      animation: animation,
+    });
+
+    if (!list.scheduled)
+      return res.status(403).send({
+        message: "It is already not scheduled."
+      });
+
+    list.scheduled = false;
     await list.save();
     res.send(list);
   } catch (error) {

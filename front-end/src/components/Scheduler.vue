@@ -11,6 +11,7 @@
           <p class="scheduleTitle">{{scheduled.animation.title}}</p>
           <p class="scheduleStatus" v-if="currentlyWatching === scheduled.animation._id">Currently watching</p>
           <p class="scheduleStatus" v-if="nextToWatch === scheduled.animation._id">Next to watch</p>
+          <button class="removeButton" @click="removeSchedule(scheduled.animation._id)"><i class="fa fa-arrow-circle-right"></i></button>
         </slide>
       </carousel>
     </div>
@@ -21,7 +22,7 @@
       <div class="list-animation" v-for="list in notScheduled" v-bind:key="list.animation._id">
         <router-link :to="{ name: 'Animation', query: { id:list.animation._id }}"><img :src="list.animation.path" /></router-link>
         <p>{{list.animation.title}}</p>
-        <button @click="addSchedule(list.animation._id)"><i class="fa fa-arrow-circle-left"></i></button>
+        <button class="addButton" @click="addSchedule(list.animation._id)"><i class="fa fa-arrow-circle-left"></i></button>
       </div>
     </div>
   </div>
@@ -80,7 +81,16 @@ export default {
     },
     async addSchedule(id) {
       try {
-        await axios.put("/api/lists/" + id);
+        await axios.put("/api/lists/addSchedule/" + id);
+        this.getNotScheduledlist();
+        this.getSchedule();
+      } catch (error) {
+        this.error = error.response.data.message;
+      }
+    },
+    async removeSchedule(id) {
+      try {
+        await axios.put("/api/lists/removeSchedule/" + id);
         this.getNotScheduledlist();
         this.getSchedule();
       } catch (error) {
@@ -105,7 +115,7 @@ export default {
   flex-direction: column;
   align-items: center;
   height: 750px;
-  font-size: 20px;
+  font-size: 15px;
   color: #FFFFFF;
   background: #2C0035;
 }
@@ -172,7 +182,7 @@ img {
   height: 350px;
 }
 
-button {
+.addButton {
   font-size: 150%;
   border: none;
   background-color: #D8D8D8;
@@ -180,6 +190,12 @@ button {
 
 button:hover {
   color: #545454;
+}
+
+.removeButton {
+  font-size: 150%;
+  border: none;
+  background-color: #2C0035;
 }
 
 @media screen and (max-width: 470px) {
@@ -248,7 +264,7 @@ button:hover {
 
   .scheduledAnimation {
     height: 360px;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .noSchedule {
