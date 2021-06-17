@@ -77,6 +77,10 @@ export default {
 </script>
 
 <style scoped>
+.main {
+  margin-bottom: 2%;
+}
+
 .search {
   display: flex;
   margin-bottom: 1.5%;
@@ -107,8 +111,8 @@ form {
 .animation-container {
   display: grid;
   grid-template-columns: 250px 250px 250px 250px 250px;
-  grid-column-gap: 2%;
-  grid-row-gap: 2%;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   justify-content: center;
   width: 100%;
 }
