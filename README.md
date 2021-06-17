@@ -9,11 +9,13 @@ Since there is a countless amount of animations in the world, I cannot put all o
 Also, there are many animations I do not know.
 Therefore, I decided to let users upload animations.
 In the home tab, users can search for animation by title. Users can also add animations to their list.
+<br />
 <img src="/images/home.jpg" width="700">
 
 ## Upload
 Users need to log in to upload animations.
 Also, users need to upload a photo of the animation and some information.
+<br />
 <img src="/images/upload-no-info.jpg" width="500">
 <img src="/images/upload-info.jpg" width="500">
 
@@ -21,12 +23,14 @@ Also, users need to upload a photo of the animation and some information.
 Inside the schedule tab, on the right side, users can see the list of animations that are not scheduled.
 Users can add animations from that list to the schedule.
 Then, users can slide the photo of animation that is scheduled so he/she can see the next animation to watch.
+<br />
 <img src="/images/schedule-no-ani.jpg" width="500">
 <img src="/images/schedule-ani.jpg" width="500">
 
 ## Profile
 If the user has logged in, then he/she will see his/her profile page.
 At there, there are user's animation list and the list of animation that the user has watched so far.
+<br />
 <img src="/images/profile.jpg" width="700">
 
 ## Animation Page
@@ -36,4 +40,5 @@ If the animation is the user's list, the page will display the "remove from list
 On contrary, if the animation is not on the list, there will be the "add to list" button.
 Also, there is a checkbox to set the animation that the user watched.
 If the user sets the animation as watched, the animation will automatically be removed from the user's list and schedule.
+<br />
 <img src="/images/animation.jpg" width="700">
