@@ -22,7 +22,7 @@
     <div id="divideLine2" />
     <div id="footer">
       <div id="git-link">GitHub Repository: <a href="https://github.com/juneonNote10/creative-project">https://github.com/juneonNote10/creative-project</a></div>
-      <p>Hour spent: 98 hours</p>
+      <p>Hour spent: 125 hours</p>
     </div>
   </div>
 </template>
