@@ -9,25 +9,25 @@ Since there is a countless amount of animations in the world, I cannot put all o
 Also, there are many animations I do not know.
 Therefore, I decided to let users upload animations.
 In the home tab, users can search for animation by title. Users can also add animations to their list.
-<img src="home.jpg" width="700">
+<img src="/images/home.jpg" width="700">
 
 ## Upload
 Users need to log in to upload animations.
 Also, users need to upload a photo of the animation and some information.
-<img src="upload-no-info.jpg" width="500">
-<img src="upload-info.jpg" width="500">
+<img src="/images/upload-no-info.jpg" width="500">
+<img src="/images/upload-info.jpg" width="500">
 
 ## Schedule
 Inside the schedule tab, on the right side, users can see the list of animations that are not scheduled.
 Users can add animations from that list to the schedule.
 Then, users can slide the photo of animation that is scheduled so he/she can see the next animation to watch.
-<img src="schedule-no-ani.jpg" width="500">
-<img src="schedule-ani.jpg" width="500">
+<img src="/images/schedule-no-ani.jpg" width="500">
+<img src="/images/schedule-ani.jpg" width="500">
 
 ## Profile
 If the user has logged in, then he/she will see his/her profile page.
 At there, there are user's animation list and the list of animation that the user has watched so far.
-<img src="profile.jpg" width="700">
+<img src="/images/profile.jpg" width="700">
 
 ## Animation Page
 From every tab, users can enter the specific animation page by clicking its photo.
@@ -36,4 +36,4 @@ If the animation is the user's list, the page will display the "remove from list
 On contrary, if the animation is not on the list, there will be the "add to list" button.
 Also, there is a checkbox to set the animation that the user watched.
 If the user sets the animation as watched, the animation will automatically be removed from the user's list and schedule.
-<img src="animation.jpg" width="700">
+<img src="/images/animation.jpg" width="700">
